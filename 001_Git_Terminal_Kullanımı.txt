@@ -398,33 +398,15 @@ git commit -m "oluşturuldu"
 git status
 git push origin main
 
+--------------- son-commit-geri-alma ------------------
+Eğer GitHub desktop ile revert falan yapıp iyice bozduysan reponun içindeki .git'i sil. 
+GitHub'daki repondan clone yap. Clone içerisinden .git'i repona kopyala.
 
+git reset --soft HEAD~1 Bu komut, son commit’i geri alır ama değişiklikleri saklar.
 
+Son commit’i tamamen silmek ve değişiklikleri de geri almak
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+git reset --hard HEAD~1
+Eğer commit’i silip yerel repoda değişiklik yaptıysanız, bunu GitHub’a yansıtmak için force push yapmanız gerekir:
+git push origin main --force
 _
